@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: local
+spec:
+  containers:
+  - name: local
+    image: "orkun1675/webdev:1.0"
+    tty: true
+  nodeSelector:
+    app: src

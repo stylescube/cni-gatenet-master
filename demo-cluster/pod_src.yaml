@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: src
+spec:
+  containers:
+  - name: src
+    image: "orkun1675/webdev:1.0"
+    tty: true
+    securityContext:
+      capabilities:
+        add:
+        - NET_ADMIN
+  nodeSelector:
+    app: src
